@@ -1,0 +1,14 @@
+import datetime
+year = int(input())
+deltatime=datetime.timedelta(days=1)
+dt=datetime.date(year=year , month=3 , day=1)
+res=dt-deltatime
+if res.day==29:
+    print("yes")
+else:
+    print("NO")
+
+# 思路：3.1的前一天如果不是29号则非闰年
+# datetime.timedelta函数用于计算时间差，注意用days
+# datetime.date引出某年的三月一日
+# res.day是因为得到的res他其实是一个带有年月日的数值，在这里只需要day
